@@ -1,30 +1,29 @@
 function generatePass() {
-  let length = document.getElementById("length").value;
-  let includesUppercase = document.getElementById("uppercase").checked;
-  let includesLowercase = document.getElementById("lowercase").checked;
-  let includesNumbers = document.getElementById("numbers").checked;
-  let includesSymbols = document.getElementById("symbols").checked;
+  let longitud = document.getElementById("longitud").value;
+  let mayusculas = document.getElementById("mayusculas").checked;
+  let minusculas = document.getElementById("minusculas").checked;
+  let numeros = document.getElementById("numeros").checked;
+  let simbolos = document.getElementById("simbolos").checked;
 
-  let characters = "";
-  if (includesUppercase) {
-    characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let caracteres = "";
+  if (mayusculas) {
+    caracteres += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   }
-  if (includesLowercase) {
-    characters += "abcdefghijklmnopqrstuvwxyz";
+  if (minusculas) {
+    caracteres += "abcdefghijklmnopqrstuvwxyz";
   }
-  if (includesNumbers) {
-    characters += "0123456789";
+  if (numeros) {
+    caracteres += "0123456789";
   }
-  if (includesSymbols) {
-    characters += "!@#$%^&*()_+-=[]{}|;':\"<>,.?/\\";
-  }
-
-  let password = "";
-  for (let i = 0; i < length; i++) {
-    let randomIndex = Math.floor(Math.random() * characters.length);
-    password += characters[randomIndex];
+  if (simbolos) {
+    caracteres += "!@#$%&*()_-|;':,. ?/";
   }
 
-  document.getElementById("pass").value = password;
+  let contraseña = "";
+  for (let i = 0; i < longitud; i++) {
+    let random = Math.floor(Math.random() * caracteres.length);
+    contraseña += caracteres[random];
+  }
+
+  document.getElementById("pass").value = contraseña;
 }
-
