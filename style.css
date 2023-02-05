@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(97, 196, 211, 0.4);
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+#pass-generator {
+  display: flex;
+  flex-direction: column;
+}
+
+.tittle {
+  text-align: center;
+  font-size: 30px;
+  
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(97, 196, 211, 0.7);
+  width: 100vh;
+  padding: 40px 0 40px 0;
+  border-radius: 20px;
+}
+
+form > div {
+  margin-bottom: 25px;
+}
+
+label{
+  font-size: 18px;
+}
+
+#length {
+  border-radius: 6px;
+  border: 1px solid black;
+  outline: none;
+}
+
+.check1 {
+  margin-left: 18px;
+}
+
+.check2 {
+  margin-left: 20px;
+}
+
+.check3 {
+  margin-left: 39px;
+}
+
+.check4 {
+  margin-left: 37px;
+}
+
+#generate-pass {
+  padding: 8px 30px 8px 30px;
+  margin: 10px 0 10px 0;
+  border-radius: 15px;
+  border: 2px solid black;
+  background-color: red;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#generate-pass:hover {
+  background-color: white;
+  border-color: red;
+  cursor: pointer;
+}
+
+#pass {
+  margin-top: 20px;
+  padding: 8px;
+  width: 40%;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 18px;
+}

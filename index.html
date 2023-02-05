@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Pass Generator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <section class="container">
+    <div id="password-generator">
+      <h1 class="tittle">Generador de Contraseñas</h1>
+      <form>
+        <div>
+          <label for="length">Longitud de la contraseña:</label>
+          <input type="number" id="length" name="length" min="8" max="32" value="">
+        </div>
+        <div>
+          <label for="uppercase" class="check1">Incluir mayùsculas:</label>
+          <input type="checkbox" id="uppercase" name="uppercase" class="check">
+        </div>
+        <div>
+          <label for="lowercase" class="check2">Incluir minùsculas:</label>
+          <input type="checkbox" id="lowercase" name="lowercase" class="check">
+        </div>
+        <div>
+          <label for="numbers" class="check3">Incluir nùmeros:</label>
+          <input type="checkbox" id="numbers" name="numbers" class="check">
+        </div>
+        <div>
+          <label for="symbols" class="check4">Incluir simbolos:</label>
+          <input type="checkbox" id="symbols" name="sysmbols" class="check">
+        </div>
+        <button id="generate-pass" onclick="event.preventDefault(); generatePass();">Generar</button>
+        <input type="text" id="pass" readonly>
+      </form>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
